@@ -33,9 +33,10 @@ mydata <- na.omit(mydata)
 ```
 
 
+```{r}
+barchartGC(~race + eatout,data=mydata)
+barchartGC(~race + eatout,data=mydata, type="percent")
 
+```
 
-
-
-
-
+According to this barchart, we can see by looking at it that there are about 80% white people eating out, about 70% black people eating out, and a little over 70% of other races that eat out. Even though there is no dramatic difference, white people ate out the most out of the given races.
