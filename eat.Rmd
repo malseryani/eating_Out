@@ -49,3 +49,21 @@ colPerc(table1)
 ```
 
 After obtaining the numerical results, we can see that 83.11% of white people, 69% of black people, and 72% of other people eat out. This confirms that white people ate out the most overall.
+
+
+```{r}
+chisq.test(table1)
+chisqtestGC(table1)
+fisher.test(table1)
+```
+
+```{r}
+fisherXY(mydata$race,mydata$eatout,
+printAll = TRUE)
+```
+
+According to the fisherXY test, we have been given a p-value of 1.183*e-05 which is a very small number and indicates that when the fisherXY test was ran, they found that black and white were statistically different. When the test is run on white and other, the p-value is .007. Therefore, this tells us that white is different than others and white is different from black. The p-value for black and others is 0.99 which is not a small value. This then tells us that black and others are not different. 
+
+
+In conclusion, we were able to look at barplots, numerical results, and the fisherXY test for the three variables. This has allowed us to come to the conclusion that black and others are not the different but, white and others as well as white and black are different. This can be achieved by running a fisherXY test and analyzing the p-values.
+
